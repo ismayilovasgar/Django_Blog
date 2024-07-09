@@ -8,14 +8,13 @@
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Update Profile</legend>
-                {{ u_form|crispy }}
-                {{ p_form|crispy }}
+                {{ u_form }}
+                {{ p_form }}
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Update</button>
-<!--                <button class="btn btn-outline-info" type="submit"><a href="{% url 'profile' %}">Go Back</a></button>-->
+                <button class="btn btn-outline-info" type="submit"><a href="{% url "profile" %}">Go Back</a></button>
             </div>
-
         </form>
 
     </div>

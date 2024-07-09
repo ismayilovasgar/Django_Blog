@@ -5,10 +5,13 @@ from users.models import Profile
 
 
 # To create the profile picture
-@receiver(post_save, sender=User)
+@receiver(post_save, sender=User, dispatch_uid="my_unique_identifier")
 def create_profile(sender, instance, created, **kwargs):
     if created:
-        Profile.object.create(user=instance)
+        Profile.objects.create(user=instance)
 
 
 # To save the profile picture
+@receiver(post_save, sender=User, dispatch_uid="my_unique_identifier")
+def save_profile(sender, instance, **kwargs):
+    instance.profile.save()

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # Custom Apps
     "blog.apps.BlogConfig",
     "users.apps.UsersConfig",
+    # "crispy_bootstrap4",
+    "crispy_forms",
     "django_cleanup",
 ]
 
@@ -136,3 +138,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # My Custom Login
 # LOGIN_REDIRECT_URL = "blog-home"
 # LOGIN_URL = "login"
+
+# crispy forms template bootstrap4
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+
+# crispy forms template bootstrap5
+# CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+# CRISPY_TEMPLATE_PACK = "bootstrap4"
