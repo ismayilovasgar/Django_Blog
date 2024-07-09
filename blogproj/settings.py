@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Custom Apps
     "blog.apps.BlogConfig",
+    "users.apps.UsersConfig",
+    "django_cleanup",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,8 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# My Custom Login
+# LOGIN_REDIRECT_URL = "blog-home"
+# LOGIN_URL = "login"
