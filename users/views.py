@@ -70,12 +70,3 @@ def profile_update(request):
         "p_form": p_form,
     }
     return render(request, "users/profile_update.html", context)
-
-
-@login_required(login_url="login")
-def logout(request):
-    return render(request, "users/logout.html")
-
-
-def login(request):
-    return render(request, "users/logout.html")
