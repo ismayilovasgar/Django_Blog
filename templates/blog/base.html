@@ -39,36 +39,38 @@
                 <span></span>
                 <span></span>
                 Create Post
-            </a>
+                </a>
                 <a href="{% url 'profile'  %}" id="auth-links">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Profile
-            </a>
-                <a href="{% url 'logout' %}" id="auth-links">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Logout
-            </a>
-              {% else %}
-              <a href="{% url 'login' %}" id="auth-links">
+               </a>
+               <form  method="POST" action="{% url 'logout'  %}" >
+                {% csrf_token %}
+                 <button id="btn_auth-links"  type="submit">Logout
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+               </form>
+               {% else %}
+               <a href="{% url 'login' %}" id="auth-links">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Login
-            </a>
-            <a href="{% url 'register' %}" id="auth-links">
+              </a>
+              <a href="{% url 'register' %}" id="auth-links">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Register
-            </a>
+              </a>
             <!-- <a href="#">
                 <span></span>
                 <span></span>

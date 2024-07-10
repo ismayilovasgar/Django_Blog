@@ -3,6 +3,7 @@ from django.urls import path, include
 from blog.views import *
 from users import views as users_views
 from django.contrib.auth.views import LogoutView, LoginView
+from blog import views
 
 # For Image --------------------------------------------
 from django.conf import settings
@@ -11,7 +12,9 @@ from django.conf.urls.static import static
 # -------------------------------------------------------
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("blog.urls")),
+    path("", views.home, name="blog-home"),
+    path("about/", views.about, name="blog-about"),
+    # path("", include("blog.urls")),
     #
     #
     # user authentications
@@ -20,12 +23,12 @@ urlpatterns = [
     path("profile/profile_update/", users_views.profile_update, name="profile-update"),
     path(
         "login/",
-        LoginView.as_view(template_name="users/login.html"),
+        LoginView.as_view(template_name='users/login.html',next_page="profile"),
         name="login",
     ),
     path(
         "logout/",
-        LogoutView.as_view(template_name="users/logout.html"),
+        LogoutView.as_view(template_name='users/logout.html',),
         name="logout",
     ),
 ]  # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse
 from .models import Post
 
@@ -18,6 +19,7 @@ posts = [
 
 
 # Create your views here.
+@login_required(login_url="login")
 def home(request):
     context = {
         "posts": Post.objects.all(),
@@ -25,5 +27,6 @@ def home(request):
     return render(request, "blog/home.html", context)
 
 
+@login_required(login_url="login")
 def about(request):
     return render(request, "blog/about.html")

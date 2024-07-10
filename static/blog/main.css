@@ -105,7 +105,8 @@ svg {
   height: 50px;
 }
 
-#auth-links {
+#auth-links,
+#btn_auth-links {
   font-family: "Poppins", sans-serif;
   position: relative;
   display: inline-block;
@@ -119,7 +120,8 @@ svg {
   overflow: hidden;
   margin-right: 5px;
 }
-#auth-links:hover {
+#auth-links:hover,
+#btn_auth-links:hover {
   font-weight: bold;
   background: #03e9f4;
   text-decoration: none;
@@ -132,14 +134,18 @@ svg {
 #auth-links:nth-child(1) {
   /* filter: hue-rotate(270deg); */
 }
-#auth-links:nth-child(2) {
+#auth-links:nth-child(2),
+#btn_auth-links:nth-child(2) {
   filter: hue-rotate(110deg);
 }
-#auth-links span {
+#auth-links span,#btn_auth-links span {
   position: absolute;
   display: block;
 }
-#auth-links span:nth-child(1) {
+
+#auth-links span:nth-child(1),
+#btn_auth-links span:nth-child(1)
+ {
   top: 0;
   left: 0;
   width: 100%;
@@ -156,7 +162,9 @@ svg {
     left: 100%;
   }
 }
-#auth-links span:nth-child(2) {
+#auth-links span:nth-child(2),
+#btn_auth-links span:nth-child(2)
+ {
   top: -100%;
   right: 0;
   width: 2px;
@@ -174,7 +182,9 @@ svg {
     top: 100%;
   }
 }
-#auth-links span:nth-child(3) {
+#auth-links span:nth-child(3),
+#btn_auth-links span:nth-child(3)
+ {
   bottom: 0;
   right: 0;
   width: 100%;
@@ -192,7 +202,9 @@ svg {
     right: 100%;
   }
 }
-#auth-links span:nth-child(4) {
+#auth-links span:nth-child(4),
+#btn-auth-links span:nth-child(4)
+ {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -250,18 +262,19 @@ button {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
   transition: 1s;
-  background: linear-gradient(
+  background-color: transparent;
+  color: White;
+  /* background: linear-gradient(
     270deg,
     rgb(247, 0, 255) 0%,
     rgb(98, 0, 255) 100%
-  );
+  ); */
 }
 
 /* a {
