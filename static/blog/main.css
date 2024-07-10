@@ -138,14 +138,14 @@ svg {
 #btn_auth-links:nth-child(2) {
   filter: hue-rotate(110deg);
 }
-#auth-links span,#btn_auth-links span {
+#auth-links span,
+#btn_auth-links span {
   position: absolute;
   display: block;
 }
 
 #auth-links span:nth-child(1),
-#btn_auth-links span:nth-child(1)
- {
+#btn_auth-links span:nth-child(1) {
   top: 0;
   left: 0;
   width: 100%;
@@ -163,8 +163,7 @@ svg {
   }
 }
 #auth-links span:nth-child(2),
-#btn_auth-links span:nth-child(2)
- {
+#btn_auth-links span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -183,8 +182,7 @@ svg {
   }
 }
 #auth-links span:nth-child(3),
-#btn_auth-links span:nth-child(3)
- {
+#btn_auth-links span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 100%;
@@ -203,8 +201,7 @@ svg {
   }
 }
 #auth-links span:nth-child(4),
-#btn-auth-links span:nth-child(4)
- {
+#btn-auth-links span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -292,4 +289,47 @@ button {
   margin-top: 20px;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.486);
   border-radius: 50px;
+}
+
+/* ************************************************************* */
+.form-group {
+  padding: 0 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group label {
+  display: block;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+.form-group p {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form-group .container {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group .container .mybtn {
+  width: 120px;
+  height: 40px;
+}
+.form-group textarea {
+  resize: none;
+}
+
+.form-group label {
+  font-size: 26px;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 0.15rem rgb(224, 221, 222));
+  text-shadow: rgb(136, 136, 2) 1px 0 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

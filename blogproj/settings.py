@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Custom Apps
-    "blog.apps.BlogConfig",
-    "users.apps.UsersConfig",
-    # "crispy_bootstrap4",
-    "crispy_forms",
+    "blog",
+    "users",
+    # "bootstrap_modal_forms",
+    # "bootstrap4",
+    # "django_forms_bootstrap",
+    # "crispy_forms",
     "django_cleanup",
 ]
 
@@ -140,7 +142,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # LOGIN_URL = "login"
 
 # crispy forms template bootstrap4
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+# CRISPY_TEMPLATE_PACK = "bootstrap4"
+# RISPY_TEMPLATE_PACK = "uni_form"
 
 
 # crispy forms template bootstrap5

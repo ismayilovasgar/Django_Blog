@@ -33,7 +33,7 @@
               <a class="nav-item nav-link" href="#">Register</a>  {% endcomment %}
                 {% comment %} <button class="noselect">Create Post</button>  {% endcomment %}
                 <h3 style="color: white; padding:20px 0 0 0; margin: 0 30px 0 0">Hello {{request.user}}</h3> 
-                <a href="#" id="auth-links"> 
+                <a href="{% url "blog-new" %}" id="auth-links"> 
                 <span></span>
                 <span></span>
                 <span></span>
