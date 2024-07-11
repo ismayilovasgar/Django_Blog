@@ -82,7 +82,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     template_name = "blog/post_new.html"
     fields = ["title", "content"]
-    success_url = reverse_lazy("blog-detail", kwargs={"pk": "3"})
+    # success_url = reverse_lazy("blog-detail", kwargs={"pk": "3"})
 
     def test_func(self) -> bool | None:
         post = self.get_object()
@@ -94,6 +94,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class PostDeleteView(DeleteView, LoginRequiredMixin, UserPassesTestMixin):
     model = Post
     template_name = "blog/post_delete.html"
+    success_url = reverse_lazy("blog-home")
 
     def test_func(self) -> bool | None:
         post = self.get_object()
