@@ -294,6 +294,7 @@ button {
 /* ************************************************************* */
 .form-group {
   padding: 0 5% 0 5%;
+  margin: 5vh 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -332,4 +333,21 @@ button {
   filter: drop-shadow(0 0 0.15rem rgb(224, 221, 222));
   text-shadow: rgb(136, 136, 2) 1px 0 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* *********************************************************** */
+.article-metadata {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  flex-basis: 50%;
+}
+
+.article-metadata .btns {
+  display: flex;
+  column-gap: 1vw;
+}
+
+.article-metadata .btns a {
+  font-size: 14px;
+  font-weight: bold;
 }

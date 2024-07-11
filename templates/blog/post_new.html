@@ -5,7 +5,7 @@
         <form action="" method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend claass="border-bottom mb-4">Create Post</legend>
+                {% comment %} <legend claass="border-bottom mb-4">Create Post</legend> {% endcomment %}
                 {{ form.as_p }}
                 {% comment %} {{ form|crispy }} {% endcomment %}
                 {% comment %} {% crispy aform %} {% endcomment %}

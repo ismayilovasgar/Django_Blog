@@ -1,20 +1,22 @@
 {% extends 'blog/base.html' %}
-
+{% load static %}
 
 {% block content %}
     <div class="content-section">
         <form action="" method="post">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend claass="border-bottom mb-4">Join Today</legend>
+                <legend class="border-bottom mb-4">Delete Post</legend>
                 {{ form }}
+                <h4>Hey,Are you sure delet this post <b>"{{post.title}}"</b></h4>
             </fieldset>
+
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                <button class="btn btn-outline-info" type="submit">Delete</button>
             </div>
         </form>
         <div class="border-top pt-3">
-            <small class="text-muted">Already have an account? <a href="{% url 'login' %}">Login</a></small>
+            <small class="text-muted">Do you need an account? <a href="{% url 'blog-detail' post.id %}">Go Back</a></small>
         </div>
     </div>
 {% endblock content %}
